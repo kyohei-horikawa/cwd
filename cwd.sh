@@ -7,15 +7,15 @@ if test "$len" -gt 0
 
     if test "$argv" = "-p"
         set wd (pwd)
-        echo $wd > ./.cwd_path
+        echo $wd > ~/cwd/.cwd_path
     else
         set wd $argv 
-        echo $wd > ./.cwd_path
+        echo $wd > ~/cwd/.cwd_path
     end
 end
 
 while read line
    set path $line
-end< ./.cwd_path
+end< ~/cwd/.cwd_path
 
 cd $path
